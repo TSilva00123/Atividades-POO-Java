@@ -1,0 +1,37 @@
+public class Main {
+    public static void main(String[] args) {
+        
+        Animal animal = new Animal();
+        animal.emitirSom();
+        
+        Cachorro cachorro = new Cachorro();
+        cachorro.emitirSom();
+        
+        Gato gato = new Gato();
+        gato.emitirSom();
+        
+    }
+}
+
+class Animal {
+    String nome;
+    public void emitirSom() {
+        System.out.println("O Animal emite um som");
+        
+    }
+}
+
+class Cachorro extends Animal {
+    @Override
+    public void emitirSom() {
+        System.out.println("O Cachorro faz Au Au");
+        
+    }
+}
+
+class Gato extends Animal {
+    @Override
+    public void emitirSom() {
+        System.out.println("O Gato faz Miau Miau");
+    }
+}
